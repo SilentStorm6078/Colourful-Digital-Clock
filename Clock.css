@@ -1,0 +1,33 @@
+body {
+    background-color: #222;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    font-size: 80px;
+    color: white;
+    border: 5px solid;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: changeColor 5s infinite, glowEffect 2s infinite;
+}
+
+@keyframes changeColor {
+    0% { border-color: red; color: red; }
+    25% { border-color: blue; color: blue; }
+    50% { border-color: green; color: green; }
+    75% { border-color: yellow; color: yellow; }
+    100% { border-color: orange; color: orange; }
+}
+
+@keyframes glowEffect {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+}
